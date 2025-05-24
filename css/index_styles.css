@@ -1,171 +1,242 @@
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 65%;
+}
+
+html, body {
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-size: 2.7rem;
+  line-height: 1.4;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+  color: #3c8453;
+}
+
+a:hover {
+  color: #bcaa96;
+}
+
+.btn {
+  background-color: #3c8453;
+  color: #f6f6f6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 0.4rem;
+  letter-spacing: 0.1em;
+}
+
+h1, h2, h3 {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 9.7rem;
+  line-height: 0.85;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 3rem;
+  width: 100%;
+  max-width: 100rem;
+}
+
+/* Index */
+.home {
+  background: url(../images/bg-home-office-city.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home .content-wrapper {
+  flex: 1 0 auto;
+}
+
+.home .content-bg {
+  padding: 3rem;
+  background: linear-gradient(105deg, #9dcee6, #ffffff);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+  border-radius: 1.2rem;
+}
+
+.home .content-bg p {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.profile-image img {
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.5rem solid #9dcee6;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.4rem 1.8rem #40a0d0;
+}
+
+footer {
+  background: linear-gradient(135deg, #9dcee6, #000000);
+  color: #020202;
+  padding: 2rem 4rem;
+  font-size: 1.9rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-left a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.footer-right .socials {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.socials img {
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+  opacity: 0.75;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  html {
+    font-size: 60%;
   }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  *, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-  }
-  
-  .content-wrapper {
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 1000px;
-  }
-  
-  body {
-    background-color: #f6f6f6;
-    font-size: 27px;
-    line-height: 1.4;
-  }
-  
-  a {
-    color: #3c8453;
-  }
-  
-  a:hover {
-    color: #bcaa96;
-  }
-  
-  .btn {
-    background-color: #3c8453;
-    color: #f6f6f6;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 5px;
-    display: inline-block;
-    line-height: 1;
-    border-radius: 4px;
-    letter-spacing: 0.1em;
-  }
-  
-  h1, h2, h3 {
-    font-family: "Caveat", cursive;
-    font-weight: 600;
-    margin: 0;
-  }
-  
+
   h1 {
-    font-size: 7rem;
-    line-height: 0.85;
+    font-size: 7.5rem;
   }
-  
-  h2 {
-    font-size: 3.6rem;
-  }
-  
-  h3 {
-    font-size: 2rem;
-  }
-  
-  /* Index */
-  .home {
-    background: url(../images/bg-home-office-city.jpg) no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .home .content-wrapper {
-    margin: 0 auto;
-    padding: 30px;
-    flex: 1 0 auto;
-  }
-  
-  .home .content-bg {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
-    border-radius: 12px;
-  }
-  
-  .home .content-bg p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-  }
-  
-  .profile-image {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-  }
-  
+
   .profile-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #3a3d75;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    width: 30rem;
+    height: 30rem;
   }
-  
-  .profile-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
   }
-  
-  footer {
-    background: linear-gradient(135deg, #9dcee6, #000000);
-    color: #020202;
-    padding: 20px 40px;
-    font-size: 1.9rem;
+
+  h1 {
+    font-size: 6rem;
   }
-  
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .content-wrapper,
+  .home .content-bg {
+    padding: 2rem;
+  }
+
+  .profile-image img {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 37%;
+  }
+
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .profile-image img {
+    width: 40rem;
+    height: 40rem;
+  }
+
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  .footer-left {
-    display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
+    gap: 1rem;
   }
-  
-  .footer-left a {
-    text-decoration: none;
-    font-size: 1.3rem;
+
+  .footer-right {
+    align-self: flex-end;
   }
-  
-  .footer-right .socials {
-    list-style: none;
-    display: flex;
-    gap: 18px;
-    padding: 0;
-    margin: 0;
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
   }
-  
-  .socials img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .socials img:hover {
-    transform: scale(1.1);
-    opacity: 0.75;
-  }
-  
-  @media (max-width: 600px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .footer-right {
-      align-self: flex-end;
-    }
-  }
-  
-  
+}
